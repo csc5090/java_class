@@ -1,0 +1,10 @@
+package Day01;
+
+public class YT_PRACTICE {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
