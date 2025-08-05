@@ -23,6 +23,8 @@ public class DataType06 {
 		System.out.println("주소 : " + addr);
 		
 		String email = "hong@gmail.com";
+		
+		
 	}
 
 }
