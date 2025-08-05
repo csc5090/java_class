@@ -15,23 +15,9 @@ public class DataType02 {
 		age=30;//선언문 하나당 변수는 하나씩만 선언가능. 마지막에 저장된 값이 남게 됨.
 		System.out.println("변경된 나이:"+age);
 		
-		switch ( age / 10 ) {
-		case 1 :
-		System.out.println("틀딱이 아닙니다.");
-		break;
-		case 2 :
-		System.out.println("틀딱이 아닙니다.");
-		break;
-		default :
-			System.out.println("개틀딱입니다.");
 		
-		}
 		
-		if ( age > 28 ) {
-			System.out.println("틀딱입니다.");
-		} else {
-			System.out.println("틀딱이 아닙니다.");
-		}
+		
 		
 	}
 }

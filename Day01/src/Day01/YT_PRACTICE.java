@@ -21,6 +21,22 @@ public class YT_PRACTICE {
 			System.out.println("없는 메뉴 입니다.");
 
 		}
+		
+		
+		/*
+		 * switch ( age / 10 ) { case 1 : System.out.println("틀딱이 아닙니다."); break; case 2
+		 * : System.out.println("틀딱이 아닙니다."); break; default :
+		 * System.out.println("개틀딱입니다.");
+		 * 
+		 * }
+		 * 
+		 * if ( age > 28 ) { System.out.println("틀딱입니다."); } else {
+		 * System.out.println("틀딱이 아닙니다."); }
+		 */
+		
+		
+		
+		
 
 	}
 
