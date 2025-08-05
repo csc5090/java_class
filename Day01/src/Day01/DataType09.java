@@ -44,7 +44,8 @@ public class DataType09 {
 		
 		System.out.printf("finger = [%07d] %n", finger);
 		
-		
+		String formatted = String.format("%-5s", String.valueOf(finger)).replace(' ', '0');
+	      System.out.println("finger = [" + formatted + "]");
 
 	}
 
