@@ -8,12 +8,30 @@ package Day01;
 public class DataType02 {
 	public static void main(String[] args) {
 		
-		int age; // 4바이트 int 타입 변수 age에 변수를 선언.
-		age = 25; // =은 오른쪽 정수숫자값 25를 좌측 변수 age에 정해준 대입연산자.
+		int age= 25; // 4바이트 int 타입 변수 age에 변수를 선언.
+		//age = 25; =은 오른쪽 정수숫자값 25를 좌측 변수 age에 정해준 대입연산자.
 		System.out.println("나이:"+ age);
 		
-		age=27;//선언문 하나당 변수는 하나씩만 선언가능. 마지막에 저장된 값이 남게 됨.
+		age=30;//선언문 하나당 변수는 하나씩만 선언가능. 마지막에 저장된 값이 남게 됨.
 		System.out.println("변경된 나이:"+age);
+		
+		switch ( age / 10 ) {
+		case 1 :
+		System.out.println("틀딱이 아닙니다.");
+		break;
+		case 2 :
+		System.out.println("틀딱이 아닙니다.");
+		break;
+		default :
+			System.out.println("개틀딱입니다.");
+		
+		}
+		
+		if ( age > 28 ) {
+			System.out.println("틀딱입니다.");
+		} else {
+			System.out.println("틀딱이 아닙니다.");
+		}
+		
 	}
-
 }
