@@ -42,7 +42,7 @@ public class DataType09 {
 		
 		// %05 -> 공백을 0으로 채움. 5자리에서 핑거값 10을 뺀 나머지 3자리를 0으로.
 		
-		System.out.printf("finger = [%0-7d] %n", finger);
+		System.out.printf("finger = [%07d] %n", finger);
 		
 		
 
