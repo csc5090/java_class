@@ -3,39 +3,19 @@ package Day01;
 public class YT_PRACTICE {
 	public static void main(String[] args) {
 
-		int press = 1;
-		switch (press) {
-		case 1:
-			System.out.println("아메리카노");
-			break;
-		case 2:
-			System.out.println("카페라떼");
-			break;
-		case 3:
-			System.out.println("카푸치노");
-			break;
-		case 4:
-			System.out.println("에스프레소");
-			break;
-		default:
-			System.out.println("없는 메뉴 입니다.");
-
-		}
 		
+		
+
 		
 		/*
-		 * switch ( age / 10 ) { case 1 : System.out.println("틀딱이 아닙니다."); break; case 2
-		 * : System.out.println("틀딱이 아닙니다."); break; default :
-		 * System.out.println("개틀딱입니다.");
+		 * for (int i = 1; i <=10; i ++) { System.out.println(i); }
 		 * 
-		 * }
-		 * 
-		 * if ( age > 28 ) { System.out.println("틀딱입니다."); } else {
-		 * System.out.println("틀딱이 아닙니다."); }
+		 * for (int i = 0; i <= 100; i += 2) System.out.println(i);
 		 */
 		
-		
-		
+		for (int i = 10; i >= 1; i--) {
+			System.out.println(i);
+		}
 		
 
 	}
@@ -109,3 +89,26 @@ public class YT_PRACTICE {
 
 // 성적 입력. 80점 이상이면 a.
 // 70점 b, 60점 c,
+
+
+/*
+ * int press = 1; switch (press) { case 1: System.out.println("아메리카노"); break;
+ * case 2: System.out.println("카페라떼"); break; case 3:
+ * System.out.println("카푸치노"); break; case 4: System.out.println("에스프레소");
+ * break; default: System.out.println("없는 메뉴 입니다.");
+ * 
+ * }
+ */
+
+
+/*
+ * switch ( age / 10 ) { case 1 : System.out.println("틀딱이 아닙니다."); break; case 2
+ * : System.out.println("틀딱이 아닙니다."); break; default :
+ * System.out.println("개틀딱입니다.");
+ * 
+ * }
+ * 
+ * if ( age > 28 ) { System.out.println("틀딱입니다."); } else {
+ * System.out.println("틀딱이 아닙니다."); }
+ */
+
