@@ -19,7 +19,7 @@ public class DataType04 {
 		float b = 122.222f ;
 		double c = 50.123121 ;
 		float d = 12322.222f;
-		double e = 121.2222222f;
+		double e = 121.2222222d;
 		System.out.println("a = "+a);
 		System.out.println("b="+b);
 		System.out.println("c="+c);
