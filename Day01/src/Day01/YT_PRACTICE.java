@@ -3,24 +3,58 @@ package Day01;
 public class YT_PRACTICE {
 	public static void main(String[] args) {
 
-		
-		
-
-		
 		/*
 		 * for (int i = 1; i <=10; i ++) { System.out.println(i); }
 		 * 
 		 * for (int i = 0; i <= 100; i += 2) System.out.println(i);
 		 */
-		
-		for (int i = 10; i >= 1; i--) {
-			System.out.println(i);
+
+		/*
+		 * // do while
+		 * 
+		 * int distance = 25; int move = 0; int height = 3;
+		 * 
+		 * 
+		 * do { System.out.println("발차기를 계속 합니다."); System.out.println("현재 이동 거리 : " +
+		 * move); move += 3; } while ( move + height < distance );
+		 * System.out.println("도착했습니다."); }
+		 */
+		// 이중 반복문
+
+		// 피라미드
+		//
+
+		for (int i = 1; i <= 5; i++) {
+			for (int j = 1; j <= i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
 		}
 		
+		
+		for (int a = 5; a >= 0; a--) {
+			for(int b = 5; b >= a; b--) {
+				System.out.print("*");
+			}
+		System.out.println();
+		}
+		
+		}
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
-
-}
 
 // 조건문 if else
 
@@ -90,7 +124,6 @@ public class YT_PRACTICE {
 // 성적 입력. 80점 이상이면 a.
 // 70점 b, 60점 c,
 
-
 /*
  * int press = 1; switch (press) { case 1: System.out.println("아메리카노"); break;
  * case 2: System.out.println("카페라떼"); break; case 3:
@@ -99,7 +132,6 @@ public class YT_PRACTICE {
  * 
  * }
  */
-
 
 /*
  * switch ( age / 10 ) { case 1 : System.out.println("틀딱이 아닙니다."); break; case 2
@@ -111,4 +143,3 @@ public class YT_PRACTICE {
  * if ( age > 28 ) { System.out.println("틀딱입니다."); } else {
  * System.out.println("틀딱이 아닙니다."); }
  */
-
