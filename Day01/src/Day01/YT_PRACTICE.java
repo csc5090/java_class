@@ -24,20 +24,25 @@ public class YT_PRACTICE {
 		// 피라미드
 		//
 
-		for (int i = 1; i <= 5; i++) {
-			for (int j = 1; j <= i; j++) {
-				System.out.print("*");
-			}
-			System.out.println();
-		}
+		int height = 5;
+
+        for (int i = 1; i <= height; i++) {
+            // 1. 공백 출력
+            for (int j = 1; j <= height - i; j++) {
+                System.out.print(" ");
+            }
+
+            // 2. 별 출력 (2*i - 1 개)
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("*");
+            }
+
+            // 3. 줄 바꿈
+            System.out.println();
+        }
+
 		
 		
-		for (int a = 5; a >= 0; a--) {
-			for(int b = 5; b >= a; b--) {
-				System.out.print("*");
-			}
-		System.out.println();
-		}
 		
 		}
 
