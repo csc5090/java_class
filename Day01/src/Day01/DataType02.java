@@ -14,8 +14,6 @@ public class DataType02 {
 		
 		age=27;//선언문 하나당 변수는 하나씩만 선언가능. 마지막에 저장된 값이 남게 됨.
 		System.out.println("변경된 나이:"+age);
-		
-
 	}
 
 }
