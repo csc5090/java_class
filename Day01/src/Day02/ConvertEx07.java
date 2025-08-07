@@ -22,8 +22,6 @@ public class ConvertEx07 {
 		
 		System.out.println("입력하신 문자 \'"+cityName+"\' 의 첫 단일문자 인 \' "+firstCityname+"'은 "+resultString);
 		
-		
-		
 		/*
 		 * Scanner scanner = new Scanner(System.in);
 		 * 
