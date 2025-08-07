@@ -32,7 +32,6 @@ public class ConvertEx06 {
 		
 		resultAnswer = (age >= 20 && age <= 29) ? "20대이다." : "20대가 아니다.";
 		System.out.println(age+"세는 "+resultAnswer);
-		
 	}
 
 }
