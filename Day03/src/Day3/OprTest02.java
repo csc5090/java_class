@@ -28,10 +28,9 @@ public class OprTest02 {
 	System.out.println("\n ============== \n");
 	
 	System.out.printf("a == 0 && ++b != 0 : %b \n", a == 0 && ++b != 0);
-	// a == 0 -> 5 == 0 -> false가 된다. 따라서 ++b 선행은 gkwl 않음.
+	// a == 0 -> 5 == 0 -> false가 된다. 따라서 ++b 선행은 하지 않음.
 	
 	System.out.printf("a=%d, b=%d %n", a,b); // 5,0
-	
 	
 	}
 	
