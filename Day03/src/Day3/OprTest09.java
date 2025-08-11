@@ -31,7 +31,6 @@ public class OprTest09 {
 					}
 					System.out.printf("당신이 입력한 %d점은(는) %c학점입니다. \n", score, grade);
 					//%d는 십진수 정수 출력형태 지시자, %c는 단일문자 출력형태.
-
 					}
 				}
 				
