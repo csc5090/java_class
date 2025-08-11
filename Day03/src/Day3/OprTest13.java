@@ -20,7 +20,6 @@ public class OprTest13 {
 		if (input != 0) {
 			System.out.print("입력하신 숫자는 0이 아닙니다.");
 		}
-
 	}
 
 }
