@@ -19,6 +19,7 @@ public class OprTest13 {
 		}
 		if (input != 0) {
 			System.out.print("입력하신 숫자는 0이 아닙니다.");
+			// ctrl + a로 전체 선택하고 ctrl+i 단축키를 누르면 자동정렬.
 		}
 	}
 
