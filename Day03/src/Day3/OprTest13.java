@@ -14,7 +14,6 @@ public class OprTest13 {
 		Scanner scan = new Scanner(System.in);
 		System.out.print("숫자를 입력하세요 >> ");
 		int input = Integer.parseInt(scan.nextLine());
-
 		if (input == 0) {
 			System.out.print("입력하신 숫자는 0입니다.");
 		}
