@@ -24,5 +24,4 @@ public class SwitchEx03 {
 			System.out.print("입력하신 " + month + "월은 봄입니다.");
 		}
 	}
-
 }
