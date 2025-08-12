@@ -27,5 +27,4 @@ private static void method02(String s) {
 		// 자바 17버전 까지는 switch ~ case 문의 표현값이 null인 경우 예외 오류가 발생.
 		// 자바 21버전부터는 null을 지정해도 예외 오류가 발생하지 않음.
 	}
-
 }
