@@ -7,11 +7,15 @@ public class SwitchEx05 {
 	public static void main(String[] args) {
 
 		/* 중첩 switch ~ case 문 사용 예) */
-
-		/*
-		 * Scanner scan = new Scanner(System.in);
-		 * System.out.print("주민번호 입력(981212-1234567) >>"); String juminNumber =
-		 * scan.nextLine(); char juNo = juminNumber.charAt(7);
+		 Scanner scan = new Scanner(System.in);
+		 System.out.print("주민번호 입력(981212-1234567) >>");
+		 String juminNumber = scan.nextLine();
+		 
+		
+		 Scanner scan = new Scanner(System.in);
+		 System.out.print("주민번호 입력(981212-1234567) >>"); 
+		 String juminNumber = scan.nextLine();
+		 char juNo = juminNumber.charAt(7);
 		 */// charAt(7) 내장메서드는 첫 문자를 0부터 시작해서 뒷자리 첫번째 단일문자를 구함.
 			// 즉 8번재 단일문자를 구함.
 		/*
