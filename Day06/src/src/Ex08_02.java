@@ -48,6 +48,17 @@ public class Ex08_02 {
 				break;
 			}
 		}
+		
+		// 교수님 코드
+		// for(;;){
+		// Random R = new Random();    new 키워드로 새로운 객체명 r을 생성.
+		// int diceNumber = r.nextInt(6)+1;    netxInt(6) 내장 메서드는 0~6미만 사이의 정수 난수를 구함.
+		// 여기에 +1하면 1이상 7미만. 1~6사이의 정수 난수를 구함.
+		
+		// System.out.println("임의의 주사우 ㅣ눈의 수="diceNumber);
+		// if(diveNumber == 4) {
+		// break;
+		// }
 	}
 
 }
