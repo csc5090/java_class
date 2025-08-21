@@ -23,7 +23,13 @@ public class ArrayEx12 {
 				System.out.println("\n =============== \n");
 				
 				String tmp = names[3];
-				System.out.printf("tmp = %s \n",tmp);
+				System.out.printf("tmp = %s \n",tmp); // %s는 문자열 출력형태 지시자
+				
+				names[0] = "Choe"; // 배열 속 첫번재(0) 값 변경(수정)
+				
+				for(String editName:names) {
+					System.out.println(editName+"\t"); // \t 는 탭키만큼 공백넣기
+				}
 		
 	}
 
