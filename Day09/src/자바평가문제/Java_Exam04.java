@@ -20,9 +20,11 @@ public class Java_Exam04 {
 		int sum = 0;
 		a = 1;
 		while (a <= 100) {
-
+			sum+=a;
+			a++;
+			// sum=sum+a++;(위와 같은 것.)
 		}
-
+		System.out.print(sum);
 	}
 
 }
