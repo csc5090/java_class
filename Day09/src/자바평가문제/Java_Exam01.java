@@ -2,7 +2,7 @@ package 자바평가문제;
 
 import java.util.Scanner;
 
-public class ObjectEx01 {
+public class Java_Exam01 {
 	static void name_print(String name) {
 		System.out.print("성 이름 : " + name);
 	}
@@ -19,7 +19,7 @@ public class ObjectEx01 {
 		System.out.print("이름을 입력하세요 >>");
 		String str2 = scan.nextLine();
 
-		ObjectEx01.name_print(str + str2);
+		Java_Exam01.name_print(str + str2);
 
 		System.out.println("\n ==================== \n");
 
