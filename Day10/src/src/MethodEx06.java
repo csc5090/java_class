@@ -23,6 +23,15 @@ public class MethodEx06 {
 		System.out.println("x=" + x + ", y=" + y); // 7,7
 		System.out.println(d.year + "년 " + d.month + "월 " + d.day + "일"); //이  은  은  과
 		System.out.println(t.year + "년 " + t.month + "월 " + t.day + "일"); //  둘  같  결
+		
+		y = 10;
+		System.out.println("x=" + x + ",y=" + y); // 7,10
+
+		t.year = 2025;
+		t.month = 8;
+		t.day = 26;
+		System.out.printf("%d/%d/%d \n", t.year, t.month, t.day);
+		System.out.println(d.year + "/" + d.month + "/" + d.day);
 
 	}
 
