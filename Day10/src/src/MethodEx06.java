@@ -30,7 +30,7 @@ public class MethodEx06 {
 		t.year = 2025;
 		t.month = 8;
 		t.day = 26;
-		System.out.printf("%d/%d/%d \n", t.year, t.month, t.day);
+		System.out.printf("%d/%d/%d\n", t.year, t.month, t.day);
 		System.out.println(d.year + "/" + d.month + "/" + d.day);
 
 	}
