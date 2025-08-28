@@ -20,6 +20,9 @@ public class ConsEx05 {
 		
 		MyDate24 md = new MyDate24(); //new MyDate24(); 에 의해서 기본생성자 호출
 		md.pr();
+		
+		
+		
 
 	}
 
