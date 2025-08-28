@@ -7,13 +7,13 @@
  * 3.생성자 명 앞에 리턴타입을 기술하지 않는다.
  */
 
-class MyDate23{
+class MyDate23{ 
 	private int year;
 	private int month;
 	private int day;//3개의 속성 정의(클래스 소속의 멤버변수 중 인스턴스 변수)
 	
-	public MyDate23() { // 전달인자가 없는 기본 생성자
-		year = 2025; // 생성자의 주된 기능인 인스턴스 변수 초기화. 초기화 후 변수 선언
+	public MyDate23() { // 전달인자가 없는 기본 생성자. 생성자의 주된 기능인 인스턴스 변수 초기화. 초기화 후 변수 선언
+		year = 2025; 
 		month = 8;
 		day = 28; 
 		System.out.println("기본 생성자 호출");
@@ -31,8 +31,10 @@ public class ClassEx03 {
 
 	public static void main(String[] args) {
 		
-		MyDate23 d = new MyDate23();
-		d.print();
+		MyDate23 d = new MyDate23();  //여기서 d(MyDate23에 담긴 객체주소를 사용하는 객체임. d 객체로 MyDate23 클래스를 호출한 것.
+		d.print(); // MyDate23()과 print()을 호출해서 사용...?
+		new MyDate23(); // 생성자 호출. MyDate23() 메서드만 호출함.
+		
 	}
 
 }
