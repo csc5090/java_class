@@ -3,6 +3,15 @@ package Pro;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+	/* 1.
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 */
+
 public class Prol {
 
 	static void clearConsole() {
