@@ -45,6 +45,15 @@ public class StaticEx05 {
 
 	public static void main(String[] args) {
 
+		Point3D pt = new Point3D();
+		pt.setX(10); // 부모로부터 상속받아 호출.
+		pt.setY(20); // 상속 받아 사용.
+		pt.setZ(30);
+
+		System.out.println("x 좌표값 : " + pt.getX()); // 상속받아 사용
+		System.out.println("y 좌표값 : " + pt.getY());
+		System.out.println("z 좌표값 : " + pt.getZ());
+
 	}
 
 }
