@@ -9,18 +9,28 @@ class Parent {
 	int b;
 	protected int c;
 	public int d;
+	
+	protected int getA() {
+		return a;
+	}
+	
+	protected void setA(int a) {
+		this.a = a;
+	}
+	
+
 }
 
 class Child extends Parent {
 	public Child(int a, int b, int c, int d) {
-		this.a = a; // [1]       // get,set을 쓴다면 좀 복잡해짐.
+		setA(a); // [1]       // get,set을 이용.
 		this.b = b; // [2]
 		this.c = c; // [3]
 		this.d = d; // [4]
 	}
 
 	void func() {
-		System.out.println(a); // [5]
+		System.out.println(getA()); // [5]
 		System.out.println(b); // [6]
 		System.out.println(c); // [7]
 		System.out.println(d); // [8]
@@ -31,7 +41,7 @@ class Ex16_2 {
 	public static void main(String[] args) {
 		Child one = new Child(1, 2, 3, 4);
 		one.func();
-		System.out.println(one.a); // [9]
+		System.out.println(one.getA()); // [9]
 		System.out.println(one.b); // [10]
 		System.out.println(one.c); // [11]
 		System.out.println(one.d); // [12]
@@ -45,3 +55,7 @@ public class Ex16_2 {
 	}
 
 }
+
+
+// 이런식으로 수정한다면 가독성이 좋지 않으니, private을 건드리는게 낫지 않나 싶습니다.
+// 만약 이게 프로젝트라면, 내가 작성한 클래스가 아니기 때문에 private을 걸어둔 이유가 있겠거니 싶어 이런식으로 작성하였습니다.
