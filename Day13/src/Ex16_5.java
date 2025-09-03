@@ -5,40 +5,34 @@
  * 
  */
 
-
-
 class HandPhone {
-	protected String model;
-	protected String number;
-	
-	public HandPhone() {}
-	public HandPhone(String model, String number) {
-	this.model=model;
-	this.number=number;
-	
-		
-	
-	
-	}
+    protected String model;
+    protected String number;
+
+    public HandPhone() {}
+
+    public HandPhone(String model, String number) {
+        this.model = model;
+        this.number = number;
+    }
 }
 
+class DicaPhone extends HandPhone {
+    private String whaso;
 
+    public DicaPhone(String model, String number, String whaso) {
+        super(model, number);
+        this.whaso = whaso;
+    }
 
-
-
-
-
+    public void prnDicaphone() {
+        System.out.println("모델명 : " + model + " 번호 : " + number + " 화소수 : " + whaso);
+    }
+}
 
 public class Ex16_5 {
-
-	public static void main(String[] args) {
-
-
-		DicaPhone dp=new DicaPhone(“갤럭시”,“010”,“1024”);
-		dp.prnDicaphone( );
-
-			//모델명 : 갤럭시 번호 : 010 화소수 : 1024 < 실행결과
-
-	}
-
+    public static void main(String[] args) {
+        DicaPhone dp = new DicaPhone("갤럭시", "010", "1024");
+        dp.prnDicaphone();
+    }
 }
