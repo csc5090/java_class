@@ -26,13 +26,16 @@ public class Ex19_01 {
 	public static void main(String[] args) {
 		
 
-		IShapeClass a = new Circ();
-		IShapeClass b = new Rect();
-		IShapeClass c = new Tria();
+		IShapeClass shape;
 
-		a.draw();
-		b.draw();
-		c.draw();
+        shape = new Circ();
+        shape.draw();
+
+        shape = new Rect();
+        shape.draw();
+
+        shape = new Tria(); 
+        shape.draw();
 
 
 	}
