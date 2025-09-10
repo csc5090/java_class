@@ -31,7 +31,5 @@ public class ListEx06 {
 			 */
 
 		}
-
 	}
-
 }
