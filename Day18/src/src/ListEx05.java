@@ -13,18 +13,16 @@ import java.util.Vector;
 public class ListEx05 {
 
 	public static void main(String[] args) {
-		
-		Vector<E> vec = new Vector();
-		
-		for(int i=1; i<=7; i++) {
-			vec.add(new Integer(i&10));
+
+		Vector vec = new Vector();
+
+		for (int i = 1; i <= 7; i++) {
+			vec.add(i & 10);
 		}
-		
+
 		Enumeration enu2 = vec.elements();
-		while(enu2.hasMoreElements()) { // 벡터에 요소가 있다면
+		while (enu2.hasMoreElements()) { // 벡터에 요소가 있다면
 			System.out.println(enu2.nextElement());
 		}
-
 	}
-
 }
