@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../../untitled2/untitled2.iml" filepath="$PROJECT_DIR$/../../untitled2/untitled2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../untitled2/ZooInformationSystem/1section/1section.iml" filepath="$PROJECT_DIR$/../../untitled2/ZooInformationSystem/1section/1section.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../untitled2/ZooInformationSystem/Animal.iml" filepath="$PROJECT_DIR$/../../untitled2/ZooInformationSystem/Animal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../untitled2/ZooInformationSystem/1section/Animal-class/Animal-class.iml" filepath="$PROJECT_DIR$/../../untitled2/ZooInformationSystem/1section/Animal-class/Animal-class.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../untitled2/Zoo/InformationSystem/InformationSystem.iml" filepath="$PROJECT_DIR$/../../untitled2/Zoo/InformationSystem/InformationSystem.iml" />
     </modules>
   </component>
 </project>
