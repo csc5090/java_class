@@ -24,8 +24,7 @@ public class ListEx16 {
 			System.out.print(" "+list.get(i));
 		}
 		System.out.println("\n ============= \n");
-		
-		
+
 	}
 
 	public static void main(String[] args) {
@@ -38,7 +37,7 @@ public class ListEx16 {
 		
 		List<Object> li02 = Arrays.asList(arr02); //배열을 컬렉션 List로 변환.
 		addNumber(li02);
-	
+		
 
 	}
 
