@@ -1,19 +1,31 @@
 package Coding_Test_;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 class ssccd {
 	public static void main(String[] args) {
-		int price = 999999;
-		int answer = 0;
-
-		if (100000 <= price && price < 300000) {
-			answer = (price - (int) (price * 0.05));
-		} else if (300000 <= price && price < 500000) {
-			answer = (price - (int) (price * 0.1));
-		} else if (500000 <= price && price <= 1000000) {
-			answer = (price - (int) (price * 0.2));
-		}
 		
-		System.out.println(answer);
-
+		List<Integer> nums = new ArrayList<>();
+		
+		nums.add(10);
+		nums.add(5);
+		nums.add(20);
+		nums.add(5);
+		nums.add(10);
+		nums.add(30);
+		
+		Set<Integer> fresh = new HashSet<>(nums);
+		List<Integer> finallist = new ArrayList<>(fresh);
+		Collections.sort(finallist);
+		
+		System.out.println(finallist);
+		
+		
+		
+		
 	}
 }
