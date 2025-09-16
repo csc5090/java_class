@@ -28,9 +28,12 @@ public class Anonymous {
 
 			@Override
 			void wake() {
+				System.out.println("7시에 일어납니다.");
 				walk();
 			}
 		};// 두번째 익명 클래스(외부클래스명$번호.class -> Anonymous$2.class
+		
+		localVar.wake();
 	}//mothod()
 	
 	void method02(Person person) {
