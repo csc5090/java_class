@@ -8,5 +8,4 @@ public class AnonymousExample3 {
 		Anonymous3 anony3=new Anonymous3();
 		anony3.method(100, 100);
 	}
-
 }
