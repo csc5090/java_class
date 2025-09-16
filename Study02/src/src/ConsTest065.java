@@ -15,7 +15,7 @@ public class ConsTest065 {
 		
 		MemberService memberService = new MemberServiceImpl(); // 업캐스팅
 		memberService.insertMember(); // 업캐스팅 이후 오버라이딩 한 메서드 호출
-
+		
 	}
 
 }
