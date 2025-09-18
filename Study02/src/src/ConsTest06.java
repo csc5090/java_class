@@ -9,7 +9,7 @@ import net.daum.service.MemberServiceImpl;
  * 
  */
 
-public class ConsTest065 {
+public class ConsTest06 {
 
 	public static void main(String[] args) {
 		

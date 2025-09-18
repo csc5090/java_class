@@ -34,6 +34,19 @@ public class RunnalbeExample {
 		System.out.println("\n ======================= \n");
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		Thread thr2 = new Thread(() -> {
 			for (int i = 1; i <= 10; i++) {
 				System.out.println(i);
