@@ -11,7 +11,7 @@ class List08{
 		for(int i=0; i<li.size();i++) {
 			sum += li.get(i);
 		}
-	}//생성자 오버로딩
+	}//생성자 오버로딩  
 	
 	void printList(List<Integer> li) {
 		for(int k:li) {
