@@ -126,3 +126,5 @@ insert into CUSTOMER (cus_no,cus_name,cus_phone,cus_email) values(cus_seq.nextva
  */
   
 delete from CUSTOMER where cus_no=6;
+
+
