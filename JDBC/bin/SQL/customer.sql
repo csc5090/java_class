@@ -63,5 +63,66 @@ select * FROM CUSTOMER; -- 테이블의 모든 컬럼(*) 레코드 데이터를 
  * 
  */
 
+--cus_no 시퀀스 생성
+
+create sequence cus_seq
+start with 1
+increment by 1
+nocache
+nocycle;
+
+--cus_seq 다음 시퀀스 번호값 확인 -> 시퀀스이름.nextval
+select cus_seq.nextval as "다음 시퀀스 번호" from dual;
+
+--sysdate 는 오라클의 날짜 함수. 오늘 날짜 시간값 확인
+select sysdate as "오늘 날짜 시간값 " from dual;
+
+--2개 레코드 저장
+INSERT INTO customer (cus_no, cus_name, cus_phone, cus_email)
+VALUES (cus_seq.nextval, '홍길동', '010-9999-9999', 'hong@naver.com');
+
+INSERT INTO customer (cus_no, cus_name, cus_phone, cus_email)
+VALUES (cus_seq.nextval, '이순신', '010-777-7777', 'lee@gamil.com');
+
+/*
+ * 	레코드 검색 쿼리문 문법형식)
+ * 	select 컬럼목록(전체컬럼은 *) from 테이블명 where  조건식 order by 기준컬럼 desc(asc);
+ * 
+ *  order by는 정렬문.
+ * 	1.desc : 내림차순
+ * 2. 내림차순(asc) 정렬 규칙)
+ * 	  한글은 가나다 역순, 영어는 알파벳 역순, 숫자는 큰 숫자부터 정렬.
+ * 
+ * 오름차순 정렬문은 asc문이다. 기본값으로 생략 가능. 오름차순 정렬은 내림차순 정렬의 역순이다.
+ */
 
 
+--고객번호를 기준으로 내림차순 정렬
+select * from customer order by cus_no desc;
+
+/*
+ * 레코드 수정 문법
+ * 
+ * update 테이블명
+ * set 컬럼명=수정할 값, 컬럼명=수정할 값,...
+ * where 조건식;
+ * 
+ */
+
+--3번 레코드 고객이름을 '수정이순신', 메일주소를 'editlee@gamil.com'으로 수정
+
+update customer set cus_name='수정이순신', cus_email='editlee@gmail.com' where cus_no=3;
+
+select cus_no, cus_name, cus_email from customer where cus_no=3;
+
+
+--삭제할 레코드 하나 저장
+insert into CUSTOMER (cus_no,cus_name,cus_phone,cus_email) values(cus_seq.nextval, '삭제할이름','010-5555-5555',
+'del@nate.com');
+
+/* 레코드 삭제 sql문인 delete문 문법 형식)
+ * delete from 테이블명 where 조건식;
+ * 
+ */
+  
+delete from CUSTOMER where cus_no=6;
