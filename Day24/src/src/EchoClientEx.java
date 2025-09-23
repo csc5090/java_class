@@ -74,7 +74,7 @@ public class EchoClientEx {
 	} // 생성자
 
 	public static void main(String[] args) {
-		new EchoClientEx(""); // 서버 ip 주소를 입력
+		new EchoClientEx("192.168.142.35"); // 서버 ip 주소를 입력
 		/*
 		 * 생성자 인자값으로 서버 ip 주소가 들어간다. localhost는 모든 내 자신 컴퓨터를 의미하는 호스트 이름. 127.0.0.1은 모든
 		 * 내 자신 컴퓨터를 의미하는 ip주소임. 결국 내 자신 컴퓨터가 서버이고 클라이언트가 되는 것.
