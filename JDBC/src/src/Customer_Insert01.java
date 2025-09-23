@@ -25,7 +25,7 @@ public class Customer_Insert01 {
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
 		String user = "week";
 		String password = "week";
-
+		String sql;
 		Connection con = null;
 		Statement stmt = null;
 		ResultSet rs = null;
@@ -43,7 +43,7 @@ public class Customer_Insert01 {
 			System.out.print("고객 이메일 >>");
 			String cus_email = scan.nextLine();
 			
-			String sql = "insert into customer (cus_no,cus_name,cus_phone,cus_email) values(cus_seq.nextval,'"+ cus_name+"','"+ cus_phone+"','"+ cus_email+"')";
+			sql = "insert into customer (cus_no,cus_name,cus_phone,cus_email) values(cus_seq.nextval,'"+ cus_name+"','"+ cus_phone+"','"+ cus_email+"')";
 			int re = stmt.executeUpdate(sql);
 			
 			if(re == 1) {
