@@ -48,7 +48,7 @@ public class Customer_Insert01 {
 			
 			if(re == 1) {
 				System.out.println("고객정보 저장 성공!");
-			}			
+			}
 		}catch(Exception e) {e.printStackTrace();}
 		finally {
 			try {
