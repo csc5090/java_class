@@ -19,11 +19,9 @@ public class Board_List {
 		System.out.println("=====================");
 
 		if (blist != null && blist.size() > 0) { // size()는 컬렉션 원소 개수를 반환
-
 			for (BoardDTO b : blist) {
 				System.out.println(b.getBno() + "\t" + b.getBtitle() + "\t" + b.getBname() + "\t" + b.getBcont() + "\t"
 						+ b.getBdate());
-
 			}
 		} else {
 			System.out.println("게시판 목록이 존재하지 않음.");

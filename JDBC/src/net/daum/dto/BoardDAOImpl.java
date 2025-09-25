@@ -58,37 +58,133 @@ public class BoardDAOImpl {
 
 		return re;
 	}
-	
-	//게시판 목록
+
+	// 게시판 목록
 	public List<BoardDTO> getBoardList() {
 		List<BoardDTO> blist = new ArrayList<>();
-		
+
 		try {
 			con = DriverManager.getConnection(url, user, pwd);
-			sql = "select * from tbl_board order by bno desc"; //번호를 기준으로 내림차순 정렬
+			sql = "select * from tbl_board order by bno desc"; // 번호를 기준으로 내림차순 정렬
 			pstmt = con.prepareStatement(sql);
 			rs = pstmt.executeQuery();
-			
-			while(rs.next()) { //복수개의 레코드가 검색되는 경우는 while 반복문으로 처리, next() 메서드는 검색된 다음레코드가 존재하면 참.
+
+			while (rs.next()) { // 복수개의 레코드가 검색되는 경우는 while 반복문으로 처리, next() 메서드는 검색된 다음레코드가 존재하면 참.
 				BoardDTO b = new BoardDTO();
-				
+
 				b.setBno(rs.getInt(1)); // 1의 뜻은 select 문 뒤에 검색되는 컬럼 순번임. 첫번째로 검색되는 컬럼으로부터 정수 숫자로 번호를 가져와 setter()에 저장.
 				b.setBname(rs.getString(2)); // 2번째로 검색되는 컬럼으로부터 문자열로 글쓴이를 가져와 setter()에 저장.
 				b.setBtitle(rs.getString("btitle"));
 				b.setBcont(rs.getString("bcont"));
 				b.setBdate(rs.getString("bdate"));
-				
-				blist.add(b); //복수개의 레코드 행을 컬렉션에 추가
+
+				blist.add(b); // 복수개의 레코드 행을 컬렉션에 추가
 			}
-					
-		} catch(Exception e) { e.printStackTrace();}
-		finally {
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
 			try {
-				if(rs != null) rs.close();
-				if(pstmt != null) pstmt.close();
-				if(con != null) con.close();
-			} catch( Exception e) {e.printStackTrace();}
+				if (rs != null)
+					rs.close();
+				if (pstmt != null)
+					pstmt.close();
+				if (con != null)
+					con.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 		return blist;
 	}
+
+	public BoardDTO getFindNo(int bno) {
+		BoardDTO db_no = null;
+
+		try {
+			con = DriverManager.getConnection(url, user, pwd);
+			sql = "select bno from tbl_board where bno=?";
+			pstmt = con.prepareStatement(sql);
+
+			pstmt.setInt(1, bno);
+			rs = pstmt.executeQuery();
+
+			if (rs.next()) { // 검색된 레코드가 하나면 if 조건문으로 처리
+				db_no = new BoardDTO();
+				db_no.setBno(rs.getInt("bno"));
+
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (pstmt != null)
+					pstmt.close();
+				if (con != null)
+					con.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return db_no;
+	} // 찾기 메서드
+
+	// 게시판 수정
+	public int updateBoard(BoardDTO eb) {
+		int re = -1;
+
+		try {
+			con = DriverManager.getConnection(url, user, pwd);
+			sql = "update tbl_board set bname=?, btitle=?, bcont=? where bno=?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, eb.getBname());
+			pstmt.setString(2, eb.getBtitle());
+			pstmt.setString(3, eb.getBcont());
+			pstmt.setInt(4, eb.getBno());
+
+			re = pstmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (con != null)
+					con.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return re;
+	}
+
+	// 삭제 메서드
+	public void deleteBoard(int bno) {
+
+		try {
+			con = DriverManager.getConnection(url, user, pwd);
+			sql = "delete from tbl_board where bno=?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, bno); // 쿼리문의 첫번째 물음표에 정수숫자로 번호값 저장
+			pstmt.executeUpdate(); // 삭제 쿼리문 수행 후 성공한 레코드 행의 개수 반환
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (con != null)
+					con.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+
+	}
+
 } // dao class

@@ -10,7 +10,6 @@ import net.daum.dto.BoardDTO;
  * 저장 후 반환값으로 정수 숫자 1을 리턴받아 if 조건문으로 1일 때 "게시판 저장에 성공했습니다."라는 메시지가 출력되게 한다.
  */
 
-
 public class Board_Insert {
 
 	public static void main(String[] args) {
@@ -22,8 +21,8 @@ public class Board_Insert {
 		System.out.println("-----------------------------");
 		System.out.print("글쓴이 입력 >> ");
 
-		String bname = scan.nextLine(); //문자열로 입력받음
-		
+		String bname = scan.nextLine(); // 문자열로 입력받음
+
 		System.out.print("글제목 입력 >> ");
 		String btitle = scan.nextLine();
 		System.out.print("글내용 입력 >> ");
@@ -31,17 +30,15 @@ public class Board_Insert {
 		String bcont = scan.nextLine();
 
 		BoardDTO b = new BoardDTO();
-		b.setBname(bname); b.setBtitle(btitle); b.setBcont(bcont);
+		b.setBname(bname);
+		b.setBtitle(btitle);
+		b.setBcont(bcont);
 
-		int result = bdao.insertBoard(b); //게시판 저장
+		int result = bdao.insertBoard(b); // 게시판 저장
 
-		if(result == 1) {
+		if (result == 1) {
 			System.out.println("게시판 저장에 성공했습니다.");
-		} //if
-
-
-
-
+		} // if
 
 	}
 
