@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BoardDAOImpl {
 
@@ -56,5 +58,37 @@ public class BoardDAOImpl {
 
 		return re;
 	}
-
+	
+	//게시판 목록
+	public List<BoardDTO> getBoardList() {
+		List<BoardDTO> blist = new ArrayList<>();
+		
+		try {
+			con = DriverManager.getConnection(url, user, pwd);
+			sql = "select * from tbl_board order by bno desc"; //번호를 기준으로 내림차순 정렬
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) { //복수개의 레코드가 검색되는 경우는 while 반복문으로 처리, next() 메서드는 검색된 다음레코드가 존재하면 참.
+				BoardDTO b = new BoardDTO();
+				
+				b.setBno(rs.getInt(1)); // 1의 뜻은 select 문 뒤에 검색되는 컬럼 순번임. 첫번째로 검색되는 컬럼으로부터 정수 숫자로 번호를 가져와 setter()에 저장.
+				b.setBname(rs.getString(2)); // 2번째로 검색되는 컬럼으로부터 문자열로 글쓴이를 가져와 setter()에 저장.
+				b.setBtitle(rs.getString("btitle"));
+				b.setBcont(rs.getString("bcont"));
+				b.setBdate(rs.getString("bdate"));
+				
+				blist.add(b); //복수개의 레코드 행을 컬렉션에 추가
+			}
+					
+		} catch(Exception e) { e.printStackTrace();}
+		finally {
+			try {
+				if(rs != null) rs.close();
+				if(pstmt != null) pstmt.close();
+				if(con != null) con.close();
+			} catch( Exception e) {e.printStackTrace();}
+		}
+		return blist;
+	}
 } // dao class
