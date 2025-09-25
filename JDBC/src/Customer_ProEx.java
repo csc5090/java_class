@@ -27,7 +27,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.Scanner;
 
-import net.daum.dao.CustomerDAOImpl;
+import net.daum.dto.CustomerDAOImpl;
 import net.daum.dto.CustomerDTO;
 
 public class Customer_ProEx {
@@ -63,8 +63,8 @@ public class Customer_ProEx {
 				ct.setInt(4, cus_no);
 
 				ct.registerOutParameter(1, java.sql.Types.VARCHAR); // 오라클 저장 프로시저에 반환 받을 첫번째 OUT 파라미터 타입은 문자열
-				// varchar이므로,
-				// 이것을 JDBC에 알려주는 단계.
+																	// varchar이므로,이것을 JDBC에 알려주는 단계.
+																	
 				ct.registerOutParameter(2, java.sql.Types.VARCHAR);
 				ct.registerOutParameter(3, java.sql.Types.VARCHAR);
 

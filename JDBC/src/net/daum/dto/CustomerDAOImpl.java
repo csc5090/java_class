@@ -1,11 +1,9 @@
-package net.daum.dao;
+package net.daum.dto;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
-import net.daum.dto.CustomerDTO;
 
 /*  JDBC api는 java.sql.* 패키지에서 제공한다. *는 모든 API를 뜻한다.
 PreparedStatement JDBC 쿼리문 수행하는 api를 사용해서 customer 테이블의 고객정보를 고객번호를 기준으로 검색하는 부분과 수정 삭제하는 jdbc코드를 작성한다. 

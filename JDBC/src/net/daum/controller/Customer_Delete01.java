@@ -2,7 +2,7 @@ package net.daum.controller;
 
 import java.util.Scanner;
 
-import net.daum.dao.CustomerDAOImpl;
+import net.daum.dto.CustomerDAOImpl;
 import net.daum.dto.CustomerDTO;
 
 /* 스캐너로 고객번호를 입력받아 오라클 db에 검색한다음, 해당 고객 번호가 있는 경우 고객번호를 기준으로 고객정보를 삭제하고,

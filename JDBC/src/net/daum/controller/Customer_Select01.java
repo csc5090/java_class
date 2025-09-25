@@ -1,4 +1,4 @@
-package src;
+package net.daum.controller;
 
 /* 고객목록 보기)
  * JDBC 쿼리문 수행하는 Statement API를 사용한다. select 문 수행
