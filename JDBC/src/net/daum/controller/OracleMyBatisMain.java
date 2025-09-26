@@ -58,7 +58,7 @@ public class OracleMyBatisMain {
 	public void mainMenu() {
 		System.out.println();
 		System.out.println("------------------");
-		System.out.println("메인 메뉴 : 1.Create | 2.Read | 3.Clear | 4.Excit");
+		System.out.println("메인 메뉴 : 1.Create | 2.Read | 3.Clear | 4.Exit");
 		System.out.print("메뉴 선택 >> ");
 		String menuNo = scan.nextLine(); // 문자열로 입력받는다.
 		System.out.println();
@@ -96,14 +96,14 @@ public class OracleMyBatisMain {
 			// 보조메뉴 출력
 			System.out.println("---------------------------");
 			System.out.println("보조 메뉴 : 1. Update 2. Delete 3.List");
-			System.out.print("메뉴 선택");
+			System.out.print("메뉴 선택 >> ");
 			String menuNo = scan.nextLine();
 			System.out.println();
 
 			if (menuNo.equals("1")) {
-				update(dept);
+				update(findDept);
 			} else if (menuNo.equals("2")) {
-				// delete(dept);
+				delete(findDept);
 			} else {
 				list(); // 부서목록보기로 이동
 			}
@@ -113,28 +113,43 @@ public class OracleMyBatisMain {
 		}
 
 	} // read
-	
+
+	// 부서번호를 기준으로 부서 삭제
+	public void delete(DeptDTO dept) {
+		System.out.println("[부서 삭제]");
+		System.out.println("----------------");
+		System.out.println("보조메뉴 : 1.OK | 2.Cancel");
+		System.out.print("메뉴 선택 >> ");
+		String menuNo = scan.nextLine();
+
+		if (menuNo.equals("1")) {
+			service.deleteDept(dept); // 부서번호를 기준으로 부서 삭제
+			list();
+		} else {
+			list();
+		}
+	}
+
 	public void update(DeptDTO dept) {
 		System.out.println("[부서 수정 정보 입력");
 		System.out.print("수정할 부서명 입력 >> ");
 		dept.setDname(scan.nextLine());
 		System.out.print("수정할 부서지역 입력 >> ");
 		dept.setLoc(scan.nextLine());
-		
+
 		System.out.println("--------------");
 		System.out.println("보조메뉴 : 1.OK | 2.Cancel");
 		System.out.print("메뉴 선택 >> ");
 		String menuNo = scan.nextLine();
-		
-		if(menuNo.equals("1")) {
+
+		if (menuNo.equals("1")) {
 			System.out.println("\n --------------------");
-			service.updateDept(dept); //부서번호를 기준으로 부서명과 부서지역을 수정
+			service.updateDept(dept); // 부서번호를 기준으로 부서명과 부서지역을 수정
 			list();
 		} else {
 			list();
 		}
-	}//update
-	
+	}// update
 
 	public void create() {
 		System.out.println("##### 부서 정보 입력 #####");

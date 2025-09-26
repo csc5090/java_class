@@ -80,4 +80,19 @@ public class OracleMyBatisService {
 		}
 		
 	}//updateDept()
+
+	public void deleteDept(DeptDTO dept) {
+		SqlSession sqlSession = MyBatisSessionFactory.getSqlSession();
+		
+		try {
+			dao.deleteDept(dept, sqlSession);
+			sqlSession.commit();
+			
+		} finally {
+			sqlSession.close();
+		}
+		
+		
+		
+	} //deleteDept
 }

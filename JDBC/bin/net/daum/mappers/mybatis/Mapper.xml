@@ -37,6 +37,18 @@
 	select * from tbl_dept where deptno=#{deptno}
 	</select>
 	
+	
+	<!-- 부서번호를 기준으로 부서명과 부서지역 수정 -->
+	
+	<update id="dept_edit"> <!--  parameterType 전달인자 속성은 생략가능 -->
+	update tbl_dept set dname=#{dname}, loc=#{loc} where deptno=#{deptno}
+	</update>
+	
+	<!-- 부서번호를 기준으로 부서삭제 -->
+	<delete id="dept_del" parameterType="net.daum.dto.DeptDTO">
+	delete from tbl_dept where deptno=#{deptno}
+	</delete>
+	
 </mapper>
 
 

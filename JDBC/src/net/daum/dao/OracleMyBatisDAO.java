@@ -35,7 +35,19 @@ public class OracleMyBatisDAO {
 	
 	public DeptDTO getFindDeptNo(int deptno, SqlSession sqlSession) {
 		return sqlSession.selectOne("dept_info", deptno);
-	}
+	} //getFindDeptNo
+
+	public void updateDept(DeptDTO dept, SqlSession sqlSession) {
+		sqlSession.update("dept_edit", dept); //mybatis에서 update()메서드는 레코드를 수정한다.
+		//dept_edit은 매퍼xml에서 설정하는 유일 아이디명
+		
+	}//updateDept()
+
+	
+	//부서번호를 기준으로 부서삭제
+	public void deleteDept(DeptDTO dept, SqlSession sqlSession) {
+		sqlSession.delete("dept_del", dept);
+	} //deleteDept()
 	
 	
 	
