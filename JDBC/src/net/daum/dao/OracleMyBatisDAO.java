@@ -1,5 +1,11 @@
 package net.daum.dao;
 
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+
+import net.daum.dto.DeptDTO;
+
 /*
  * DAO (Data Access Object) 실제로 데이터베이스(DB)에 접근하여 CRUD(Create(데이터 저장) -> insert 쿼리문 ,
  *    Read(데이터 조회) -> select 쿼리문 , Update, Delete) 작업을 수행하는 곳 
@@ -16,7 +22,20 @@ package net.daum.dao;
 
 public class OracleMyBatisDAO {
 	
+	public List<DeptDTO> selectAll(SqlSession sqlSession) {
+		List<DeptDTO> dlist = sqlSession.selectList("dept_list"); 
+		
+		return dlist;
+	}
+
+	public void insertDept(DeptDTO deptDTO, SqlSession sqlSession) {
+		sqlSession.insert("dept_in", deptDTO);		
+		
+	}//insertDept()
 	
+	public DeptDTO getFindDeptNo(int deptno, SqlSession sqlSession) {
+		return sqlSession.selectOne("dept_info", deptno);
+	}
 	
 	
 	
