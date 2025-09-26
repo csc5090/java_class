@@ -63,7 +63,7 @@ public class OracleMyBatisService {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-				sqlSession.close();
+			sqlSession.close();
 
 		}
 		return deptNo;
@@ -71,28 +71,26 @@ public class OracleMyBatisService {
 
 	public void updateDept(DeptDTO dept) {
 		SqlSession sqlSession = MyBatisSessionFactory.getSqlSession();
-		
+
 		try {
-			dao.updateDept(dept,sqlSession);
+			dao.updateDept(dept, sqlSession);
 			sqlSession.commit();
 		} finally {
 			sqlSession.close();
 		}
-		
-	}//updateDept()
+
+	}// updateDept()
 
 	public void deleteDept(DeptDTO dept) {
 		SqlSession sqlSession = MyBatisSessionFactory.getSqlSession();
-		
+
 		try {
 			dao.deleteDept(dept, sqlSession);
 			sqlSession.commit();
-			
+
 		} finally {
 			sqlSession.close();
 		}
-		
-		
-		
-	} //deleteDept
+
+	} // deleteDept
 }
