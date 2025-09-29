@@ -49,6 +49,10 @@
 	delete from tbl_dept where deptno=#{deptno}
 	</delete>
 	
+	<delete id="dept_all">
+	delete from tbl_dept
+	</delete>
+	
 </mapper>
 
 

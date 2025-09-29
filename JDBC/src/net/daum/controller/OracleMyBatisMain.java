@@ -71,23 +71,38 @@ public class OracleMyBatisMain {
 		case "2":
 			read();
 			break;
-			// case "3" : clear(); break;
+		case "3" : clear(); break;
 		case "4":
 			exit();
 			break;
 		}
 	} // 메인 메뉴 메서드 호출
 
+	private void clear() {
+		System.out.println("[부서 전체 삭제]");
+		System.out.println("-----------------------");
+		System.out.println("보조 메뉴 : 1.OK | 2. Cancle");
+		System.out.print("메뉴 선택 >> ");
+		String menuNo = scan.nextLine();
+		
+		if(menuNo.equals("1")) {
+			service.delAllDept(); //부서 전체 삭제
+			list();
+		} else {
+			list();
+		}
+	}
+
 	public void read() {
 		System.out.println("[부서정보 보기(읽기)]");
 		System.out.print("부서번호 입력 >> ");
 		int deptno = Integer.parseInt(scan.nextLine());
 
-		// DB 호출은 여기서 딱 한 번만!
+		
 		DeptDTO findDept = service.getFindDeptNo(deptno);
 
 		if (findDept != null) { // 부서 정보가 있다면
-			// 위에서 찾아온 findDept 변수를 그대로 사용합니다.
+
 			System.out.println("#############");
 			System.out.println("부서번호 : " + findDept.getDeptno());
 			System.out.println("부서명 : " + findDept.getDname());
@@ -114,7 +129,7 @@ public class OracleMyBatisMain {
 
 	} // read
 
-	// 부서번호를 기준으로 부서 삭제
+	
 	public void delete(DeptDTO dept) {
 		System.out.println("[부서 삭제]");
 		System.out.println("----------------");

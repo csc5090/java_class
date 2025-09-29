@@ -49,7 +49,10 @@ public class OracleMyBatisDAO {
 		sqlSession.delete("dept_del", dept);
 	} //deleteDept()
 	
-	
+	//부서전체삭제
+	public void delAllDept(SqlSession sqlSession) {
+		sqlSession.delete("dept_all");
+	} //delAllDept()
 	
 
 }

@@ -93,4 +93,15 @@ public class OracleMyBatisService {
 		}
 
 	} // deleteDept
+
+	public void delAllDept() {
+		SqlSession sqlSession = MyBatisSessionFactory.getSqlSession();
+		
+		try {
+			dao.delAllDept(sqlSession);
+			sqlSession.commit();
+		} finally {
+			sqlSession.close();
+		}
+	}
 }
