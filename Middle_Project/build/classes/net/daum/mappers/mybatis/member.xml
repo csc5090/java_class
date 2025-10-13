@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="Member"> <!-- 메퍼네임 스페이스명을 Member로 설정 -->
+  
+  <!-- 아이디 중복 검색 -->
+   <select id="m_idcheck" parameterType="java.lang.String" resultType="member">
+   <!-- parameterType은 전달인자 타입으로 생략 가능. resultType은 반환타입으로 생략 불가능.
+   		resultType속성값인 member는 sqlmap.xml에서 설정한 net.daum.dto.MemberDTO 빈 클래스 객체 별칭이름이다. -->
+   		select * from member where mem_id=#{id}  
+   </select>
+   
+   <!-- 우편 주소 검색 -->
+  <select id="z_list" resultType="zipcode"> <!-- parameterType 전달인자 타입은 생략함 -->
+   select * from zipcode where dong=#{dong}
+  </select>
+  
+  <!-- 회원저장 -->
+     <insert id="m_in">
+       insert into memberMvc (mem_id,mem_pwd,mem_name,mem_zip,mem_zip2,mem_addr,mem_addr2,mem_phone01,
+      mem_phone02,mem_phone03,mail_id,mail_domain,mem_state,mem_date) values(#{mem_id},#{mem_pwd},
+      #{mem_name}, #{mem_zip},#{mem_zip2},#{mem_addr},#{mem_addr2},#{mem_phone01},#{mem_phone02},
+      #{mem_phone03},#{mail_id},#{mail_domain},1,sysdate)
+     </insert>
+  
+  </mapper>
