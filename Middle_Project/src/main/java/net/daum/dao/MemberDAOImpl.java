@@ -102,7 +102,107 @@ public class MemberDAOImpl implements MemberDAO {
 			}
 		}
 		
+	} // 회원저장 insertMember()
+
+	@Override
+	public void updatePwd(MemberDTO m) {
+		SqlSession sqlSession = null;
+		
+		try {
+			sqlSession = getSqlSession(); //마이바티스 쿼리문 수행 객체 sqlSession 생성
+			
+			sqlSession.update("p_edit",m); //마이바티스에서 update()메서드는 레코드를 수정함.
+			//member.xml에서 설정할 유일한 아이디명
+			sqlSession.commit();
+		} finally {
+			if(sqlSession != null) {
+				sqlSession.close();
+			}
+		}
+		
+	}//updatePwd() 암호화 된 임시비번 수정
+
+	@Override
+	public MemberDTO pwdMember(MemberDTO m) {
+		SqlSession sqlSession = null;
+		
+		try {
+			sqlSession = getSqlSession(); 
+			
+			return sqlSession.selectOne("p_find", m);
+			
+		} finally {
+			if(sqlSession != null) {
+				sqlSession.close();
+			}
+		}
+	} //pwdMember() -> 아이디와 회원이름을 기준으로 회원정보 검색 - > 비번찾기
+
+	@Override
+	public MemberDTO loginCheck(String id) {
+		SqlSession sqlSession = null;
+		
+		try {
+			sqlSession = getSqlSession(); 
+			return sqlSession.selectOne("p_loginCheck", id);
+			
+		} finally {
+			if(sqlSession != null) {
+				sqlSession.close();
+			}
+		}
+		
 	}
+
+	@Override
+	public MemberDTO getMember(String id) {
+		SqlSession sqlSession = null;
+		
+		try {
+			sqlSession = getSqlSession(); 
+			return sqlSession.selectOne("member_info", id);
+			
+		} finally {
+			if(sqlSession != null) {
+				sqlSession.close();
+			}
+		}
+	}//getMember() -> 아이디에 해당하는 회원정보 가져오기
+
+	@Override
+	public void editMember(MemberDTO m) {
+		SqlSession sqlSession = null;
+		
+		try {
+			sqlSession = getSqlSession(); 
+			sqlSession.update("medit_ok", m);
+			sqlSession.commit();
+			
+		} finally {
+			if(sqlSession != null) {
+				sqlSession.close();
+			}
+		}
+		
+		
+	}//editMember() --> 아이디를 기준으로 회원정보 수정
+
+	@Override
+	public void delMem(MemberDTO dm) {
+		SqlSession sqlSession = null;
+		
+		try {
+			sqlSession = getSqlSession(); 
+			sqlSession.update("m_del_ok", dm);
+			sqlSession.commit();
+			
+		} finally {
+			if(sqlSession != null) {
+				sqlSession.close();
+			}
+		}
+		
+	}//회원 탈퇴
 	
 
 }

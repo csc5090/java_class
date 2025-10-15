@@ -24,7 +24,7 @@ public class MemberServiceImpl implements MemberService {
 	public MemberDTO idCheck(String id) {
 		return memberDao.idCheck(id);
 	}
-	
+		
 	@Override
 	public List<ZipcodeDTO> zipFind(String dong){
 	    return memberDao.zipFind(dong); 
@@ -33,6 +33,40 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public void insertMember(MemberDTO member) {
 		memberDao.insertMember(member);
+	}
+
+	@Override
+	public void updatePwd(MemberDTO m) {
+		memberDao.updatePwd(m);
+		
+	}//암호화 된 임시비번 수정
+
+	@Override
+	public MemberDTO pwdMember(MemberDTO m) {
+		
+		return memberDao.pwdMember(m);
+	}//아이디와 회원번호를 기준으로 회원정보 검색(비번 찾기)
+
+	@Override
+	public MemberDTO loginCheck(String id) {
+		return memberDao.loginCheck(id);
+	}
+
+	@Override
+	public MemberDTO getMember(String id) {
+		return memberDao.getMember(id);
+	} //아이디에 해당하는 회원정보 가져오기
+
+	@Override
+	public void editMember(MemberDTO m) {
+		 memberDao.editMember(m);
+		
+	}
+
+	@Override
+	public void delMem(MemberDTO dm) {
+		memberDao.delMem(dm);
+		
 	}
 	
 }

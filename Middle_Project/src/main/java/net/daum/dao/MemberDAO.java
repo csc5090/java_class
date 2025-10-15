@@ -12,6 +12,18 @@ public interface MemberDAO {
 	List<ZipcodeDTO> zipFind(String dong);
 
 	void insertMember(MemberDTO member);
+
+	void updatePwd(MemberDTO m);
+
+	MemberDTO pwdMember(MemberDTO m);
+
+	MemberDTO loginCheck(String id);
+
+	MemberDTO getMember(String id);
+
+	void editMember(MemberDTO m);
+
+	void delMem(MemberDTO dm);
 	
 
 }
